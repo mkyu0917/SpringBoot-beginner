@@ -1,0 +1,24 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.1'  // 스프링버전
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE' // 스프링 의존성 매니저
+	id 'java' // 언어
+}
+
+group = 'hello' // 그룹아이디
+version = '0.0.1-SNAPSHOT' // 버전
+sourceCompatibility = '11' // java 11버전
+
+repositories {
+	mavenCentral() // 메이븐 센트럴사이트에서 필요한 라이브러리를 다운받아라. ( 특정한 주소를 넣을 수도 있음.)
+}
+
+dependencies { //의존성
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // 타임리프 엔진
+	implementation 'org.springframework.boot:spring-boot-starter-web' // 스프링부트 웹
+	testImplementation 'org.springframework.boot:spring-boot-starter-test' // 스프링 테스트
+	developmentOnly("org.springframework.boot:spring-boot-devtools")
+}
+
+test {
+	useJUnitPlatform()
+}
